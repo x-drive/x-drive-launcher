@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   context: path.resolve(__dirname, '../src'),
   entry: {
-    index: './app/index.jsx'
+    index: ['./index.jsx']
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -13,9 +13,36 @@ module.exports = {
   module: {
     rules: [
       {
-        loader: 'babel-loader',
         test: /\.jsx?$/,
-        include: [path.resolve(__dirname, '../src')]
+        loader: 'babel-loader',
+        include: [path.resolve(__dirname, '../src')],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+        include: /node_modules/
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              sourceMap: true,
+              localIdentName: '[path]-[local]'
+            }
+          },
+          {
+            loader: 'less-loader'
+          }
+        ],
+        include: [path.resolve(__dirname, '../src')],
+        exclude: /node_modules/
       }
     ]
   },
