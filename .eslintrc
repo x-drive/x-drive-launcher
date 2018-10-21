@@ -1,6 +1,12 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb-base", "airbnb-base/rules/strict", "airbnb/rules/react"],
+  "extends": [
+    "airbnb-base",
+    "airbnb-base/rules/strict",
+    "airbnb/rules/react",
+    "prettier",
+    "prettier/react"
+  ],
   "env": {
     "browser": true
   },
