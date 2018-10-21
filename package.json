@@ -1,0 +1,26 @@
+{
+  "name": "x-drive-launcher",
+  "version": "1.0.0",
+  "description": "Launcher of XDrive.",
+  "keywords": [
+    "javascript",
+    "micro-front-end"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x-drive/x-drive-launcher.git"
+  },
+  "author": {
+    "name": "Henry Li",
+    "email": "henry1943@163.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/x-drive/x-drive-launcher/issues"
+  },
+  "homepage": "https://github.com/x-drive/x-drive-launcher#readme"
+}
